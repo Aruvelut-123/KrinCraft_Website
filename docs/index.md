@@ -7,8 +7,8 @@ hero:
   text: "食用文档"
   tagline: 为玩家提供指令，领地食用等的食用文档
   image:
-    src: /logo.png
-    alt: logo
+    src: /images/logo.png
+    alt: KrinCraft
   actions:
     - theme: brand
       text: 食用此文档
