@@ -10,7 +10,8 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: '食用文档', link: '/getting-started/' }
+      { text: '食用文档', link: '/getting-started/' },
+      { text: '论坛', link: 'https://www.kxkl2024.cn' }
     ],
 
     sidebar: [
