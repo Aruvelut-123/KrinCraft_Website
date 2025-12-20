@@ -12,7 +12,7 @@ hero:
       link: /getting-started
     - theme: alt
       text: 常见问题
-      link: /api-examples
+      link: /Q&A
 
 features:
   - title: 😄KrinCraft 服务器介绍

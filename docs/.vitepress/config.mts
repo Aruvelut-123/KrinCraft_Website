@@ -3,6 +3,7 @@ import dayjs from 'dayjs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  lang: 'zh',
   title: "Minecraft KrinCraft 服务器",
   description: "操作文档",
   themeConfig: {
@@ -18,8 +19,7 @@ export default defineConfig({
         items: [
           { text: '😄KrinCraft 服务器介绍', link: '/getting-started/' },
           { text: '🗨️指令介绍', link: '/commands/' },
-          { text: '🌻服务器领地功能食用教程', link: '/res/'},
-          { text: '😃简化领地教程', link: 'res/res_lite'}
+          { text: '💰货币介绍', link: '/money/' }
         ]
       }
     ],
@@ -58,7 +58,7 @@ export default defineConfig({
                   navigateUpKeyAriaLabel: '上方向键',
                   navigateDownKeyAriaLabel: '下方向键',
                   closeText: '关闭',
-                  closeKeyAriaLabel: 'esc',
+                  closeKeyAriaLabel: 'esc'
                 },
               },
             },
