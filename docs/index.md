@@ -12,10 +12,10 @@ hero:
   actions:
     - theme: brand
       text: 食用此文档
-      link: /getting-started
+      link: /getting-started/
     - theme: alt
       text: 常见问题
-      link: /Q&A
+      link: /Q&A/
 
 features:
   - title: 😄KrinCraft 服务器介绍

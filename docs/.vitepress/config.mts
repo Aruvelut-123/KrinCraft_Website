@@ -30,7 +30,8 @@ export default defineConfig({
     },
     socialLinks: [
       { icon: 'github', link: 'https://github.com/kxkl2077/KrinCraft_Website' },
-      { icon: 'bilibili', link: 'https://space.bilibili.com/2012569194' }
+      { icon: 'bilibili', link: 'https://space.bilibili.com/2012569194' },
+      { icon: 'qq',link: 'https://qm.qq.com/q/rcC29iyJk' }
     ],
     footer: { // 页脚
       message: '基于 MIT 协议发表。',
