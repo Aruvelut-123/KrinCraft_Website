@@ -21,7 +21,8 @@ export default defineConfig({
           { text: '😄KrinCraft 服务器介绍', link: '/getting-started/' },
           { text: '🗨️指令介绍', link: '/commands/' },
           { text: '💰货币介绍', link: '/money/' },
-          { text: '🎮街机介绍', link: '/bnes/' }
+          { text: '🎮街机介绍', link: '/bnes/' },
+          { text: '🐧互通介绍', link: '/QGroup/' }
         ]
       }
     ],
