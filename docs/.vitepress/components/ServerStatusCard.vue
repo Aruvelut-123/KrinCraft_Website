@@ -70,15 +70,30 @@ export default {
     }
   },
   mounted() {
-    this.fetchServerStatus();
-    // 从页面元素获取IP和端口
+    // 在挂载时先尝试从多个来源推断服务器地址（优先 data-field，其次页面显示文本）
     const ipEl = document.querySelector('[data-field="server_ip"] dd');
     const portEl = document.querySelector('[data-field="server_port"] dd');
-    if (ipEl && ipEl.innerText.trim()) {
-      const rawIp = ipEl.innerText.trim();
-      const rawPort = portEl ? portEl.innerText.trim() : '';
+    const displayIpEl = document.getElementById('ssc-display-ip');
+    let rawIp = '';
+    let rawPort = '';
+    if (ipEl && ipEl.innerText && ipEl.innerText.trim()) {
+      rawIp = ipEl.innerText.trim();
+      rawPort = portEl && portEl.innerText ? portEl.innerText.trim() : '';
+    } else if (displayIpEl) {
+      // 尝试从 data-copy-value 或者文本内容解析（允许显示为 "host:port"）
+      rawIp = displayIpEl.dataset && displayIpEl.dataset.copyValue ? displayIpEl.dataset.copyValue.trim() : (displayIpEl.innerText || '').trim();
+      // 如果文本包含冒号，则拆分端口
+      if (rawIp && rawIp.includes(':')) {
+        const parts = rawIp.split(':');
+        rawIp = parts[0];
+        rawPort = parts.slice(1).join(':');
+      }
+    }
+    if (rawIp) {
       this.fullAddress = rawIp + (rawPort ? ':' + rawPort : '');
     }
+    // 无论如何都继续获取服务器状态，避免因缺少页面元素而提前终止逻辑
+    this.fetchServerStatus();
   },
   methods: {
     copyServerIp() {
